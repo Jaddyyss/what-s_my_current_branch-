@@ -10,6 +10,6 @@ script = ExtResource("1_og753")
 [node name="Button" type="Button" parent="." unique_id=312128639]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Branch"
+text = "main"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

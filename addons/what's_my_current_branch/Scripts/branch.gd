@@ -15,9 +15,8 @@ func _on_button_pressed():
 
 func _refresh_branch():
 	var branch = _get_current_branch()
-	print_debug("Current branch: ", branch)
 	if button:
-		button.text = "  " + branch  # shows on the toolbar button
+		button.text = "" + branch  # shows on the toolbar button
 
 
 func _get_current_branch():
