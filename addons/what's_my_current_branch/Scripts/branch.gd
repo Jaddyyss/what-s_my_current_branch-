@@ -6,6 +6,7 @@ extends HBoxContainer
 
 func _ready():
 	_refresh_branch()
+	auto_refresh()
 
 
 func _on_button_pressed():
@@ -47,3 +48,12 @@ func _get_current_branch():
 		return content.substr(PREFIX.length())
 	else:
 		return "(" + content.substr(0, 7) + ")"
+
+
+func auto_refresh():
+	# Set up a timer to refresh every 3 seconds
+	var timer = Timer.new()
+	timer.wait_time = 3.0
+	timer.autostart = true
+	timer.timeout.connect(_refresh_branch)
+	add_child(timer)
